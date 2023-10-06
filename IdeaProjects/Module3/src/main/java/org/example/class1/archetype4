@@ -1,0 +1,46 @@
+maven-archetype-quickstart: This archetype is one of the most basic and widely used. It creates a simple Java project structure with a main class and a test class. It's a good choice for starting a small Java application.
+
+maven-archetype-webapp: This archetype sets up a basic Java web application using Servlets and JSPs. It's suitable for web development projects.
+
+maven-archetype-j2ee-simple: This archetype is designed for creating a basic Java EE (Enterprise Edition) project, which can be used for building enterprise applications using technologies like JavaServer Faces (JSF) and Enterprise JavaBeans (EJB).
+
+maven-archetype-quickstart-jdk8: Similar to the maven-archetype-quickstart, this archetype is specifically tailored for Java 8 projects.
+
+maven-archetype-quickstart-jdk9: Likewise, this archetype is intended for Java 9 projects.
+
+maven-archetype-archetype: This is a meta-archetype, used to generate custom archetypes. It's helpful if you want to create your own project template.
+
+maven-archetype-plugin: If you are creating a Maven plugin, this archetype helps set up a basic Maven plugin project structure.
+
+maven-archetype-spring: This archetype is used for starting a Spring-based Java project. It includes basic Spring configurations.
+
+maven-archetype-ear: This archetype is for creating Java EE Enterprise Archive (EAR) projects, typically used for enterprise applications consisting of multiple modules.
+
+Examples Command to create all above projects.
+
+# Basic Java Project (maven-archetype-quickstart)
+mvn archetype:generate -DgroupId=com.example -DartifactId=my-quickstart-project -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+# Java Web Application (maven-archetype-webapp)
+mvn archetype:generate -DgroupId=com.example -DartifactId=my-webapp-project -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false
+
+# Java EE Project (maven-archetype-j2ee-simple)
+mvn archetype:generate -DgroupId=com.example -DartifactId=my-javaee-project -DarchetypeArtifactId=maven-archetype-j2ee-simple -DinteractiveMode=false
+
+# Java 8 Project (maven-archetype-quickstart-jdk8)
+mvn archetype:generate -DgroupId=com.example -DartifactId=my-quickstart-project-java8 -DarchetypeArtifactId=maven-archetype-quickstart-jdk8 -DinteractiveMode=false
+
+# Java 9 Project (maven-archetype-quickstart-jdk9)
+mvn archetype:generate -DgroupId=com.example -DartifactId=my-quickstart-project-java9 -DarchetypeArtifactId=maven-archetype-quickstart-jdk9 -DinteractiveMode=false
+
+# Meta-Archetype for Creating Custom Archetypes (maven-archetype-archetype)
+mvn archetype:generate -DgroupId=com.example -DartifactId=my-archetype-project -DarchetypeArtifactId=maven-archetype-archetype -DinteractiveMode=false
+
+# Maven Plugin Project (maven-archetype-plugin)
+mvn archetype:generate -DgroupId=com.example -DartifactId=my-plugin-project -DarchetypeArtifactId=maven-archetype-plugin -DinteractiveMode=false
+
+# Spring-Based Java Project (maven-archetype-spring)
+mvn archetype:generate -DgroupId=com.example -DartifactId=my-spring-project -DarchetypeArtifactId=maven-archetype-spring -DinteractiveMode=false
+
+# Java EE Enterprise Archive Project (maven-archetype-ear)
+mvn archetype:generate -DgroupId=com.example -DartifactId=my-ear-project -DarchetypeArtifactId=maven-archetype-ear -DinteractiveMode=false

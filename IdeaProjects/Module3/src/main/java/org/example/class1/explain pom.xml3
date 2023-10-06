@@ -1,0 +1,41 @@
+Also given in PPT
+
+
+===========
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This is a Maven Project Object Model (POM) file -->
+
+<!-- Define the XML namespace for the POM -->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <!-- Specify the POM schema version -->
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Define the group or organization that owns the project -->
+    <groupId>example.com</groupId>
+
+    <!-- Define the name of the project (artifact) -->
+    <artifactId>example</artifactId>
+
+    <!-- Define the version of the project -->
+    <version>1.0-SNAPSHOT</version>
+
+    <!-- Declare project dependencies -->
+    <dependencies>
+        <!-- Define a dependency on the "commons-io" library -->
+        <dependency>
+            <!-- Group or organization providing the dependency -->
+            <groupId>commons-io</groupId>
+
+            <!-- Name of the dependency artifact -->
+            <artifactId>commons-io</artifactId>
+
+            <!-- Version of the dependency -->
+            <version>2.6</version>
+        </dependency>
+    </dependencies>
+</project>

@@ -1,0 +1,8 @@
+The @Suite annotation is deprecated in JUnit Jupiter 5.8.1 because it is no longer necessary.
+JUnit Jupiter 5.8.1 will automatically scan your project for test classes and run them.
+
+The @Suite annotation was originally introduced to allow you to specify the test classes that should be included in a test suite.
+However, this is no longer necessary because JUnit Jupiter 5.8.1 can automatically detect your test classes.
+
+The deprecation of the @Suite annotation is part of JUnit Jupiter's effort to make it easier to write and run tests.
+By removing unnecessary annotations, JUnit Jupiter is making it easier for developers to get started with testing.

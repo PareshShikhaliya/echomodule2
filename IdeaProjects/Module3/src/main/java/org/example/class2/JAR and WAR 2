@@ -1,0 +1,18 @@
+JAR (Java Archive):
+
+Purpose: JAR files are primarily used to package Java classes and related resources, such as libraries and configuration files.
+File Extension: .jar
+Structure: JAR files use a ZIP compression format and contain Java bytecode, class files, resources (like properties files or images), and libraries (JAR files) that a Java application depends on.
+Deployment: JAR files are typically used for Java applications that are meant to be executed as standalone applications or as libraries in other Java projects. They don't include web-related components like servlets or JSP files.
+
+
+WAR (Web Archive):
+
+Purpose: WAR files are used to package web applications specifically. They include Java Servlets, JSP (JavaServer Pages), HTML files, CSS, JavaScript, and other web resources.
+File Extension: .war
+Structure: WAR files also use a ZIP compression format but have a specific structure that adheres to the Java EE (Enterprise Edition) standard.
+ They include directories like WEB-INF and META-INF,
+  where configuration files, servlets, JSPs, and other resources are organized.
+Deployment: WAR files are designed for deployment on Java EE-compatible web servers,
+ like Apache Tomcat or WildFly. They contain the components required to run a web
+  application, including the server-specific deployment descriptors.
