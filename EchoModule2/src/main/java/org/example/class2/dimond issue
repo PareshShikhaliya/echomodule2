@@ -1,0 +1,45 @@
+#include <iostream>
+using namespace std;
+
+// Base class Developer
+class Developer {
+public:
+    void develop() {
+        cout << "Developer is developing." << endl;
+    }
+};
+
+// First derived class FrontendDeveloper
+class FrontendDeveloper : virtual public Developer {
+public:
+
+    void designUI() {
+        cout << "FrontendDeveloper designs UI for frontend." << endl;
+    }
+};
+
+// Second derived class BackendDeveloper
+class BackendDeveloper : virtual public Developer {
+public:
+    void implementBackend() {
+        cout << "BackendDeveloper implements backend functionality." << endl;
+    }
+};
+
+// Diamond problem class FullStackDeveloper inheriting from FrontendDeveloper and BackendDeveloper
+class FullStackDeveloper : public FrontendDeveloper, public BackendDeveloper {
+public:
+    void developFullStack() {
+        designUI(); // Calls FrontendDeveloper's designUI()
+        implementBackend(); // Calls BackendDeveloper's implementBackend()
+    }
+};
+
+int main()
+{
+    FullStackDeveloper fullStackDeveloper;
+    fullStackDeveloper.developFullStack();
+    fullStackDeveloper.develop(); // Ambiguity: Which develop() to call? FrontendDeveloper's develop() or BackendDeveloper's develop()?
+
+    return 0;
+}

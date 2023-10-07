@@ -1,0 +1,17 @@
+Abstraction:
+
+Abstraction is the process of simplifying complex real-world entities into their essential characteristics,
+ignoring irrelevant details.
+In Java, abstraction is often achieved through abstract classes and interfaces.
+Abstract classes are classes that cannot be instantiated and may contain abstract methods (methods without implementation) that must be implemented by their subclasses. They provide a blueprint for other classes and define a common interface for a group of related classes.
+Interfaces are similar to abstract classes but only contain abstract method declarations and constant fields. Classes can implement multiple interfaces to support multiple inheritance of behavior.
+Abstraction allows you to define a common set of methods that must be implemented by subclasses, ensuring a consistent interface for related classes.
+It helps in reducing complexity and promoting code reusability by providing a common interface for a group of related classes.
+
+Inheritance:
+
+Inheritance is a mechanism in OOP where a new class (subclass) is created based on an existing class (superclass), inheriting its attributes and methods.
+The subclass inherits the properties and behaviors (fields and methods) of the superclass, allowing code reuse and promoting the "is-a" relationship between classes.
+In Java, inheritance is achieved using the extends keyword. A subclass can extend only one superclass but can implement multiple interfaces.
+Inheritance allows you to create a hierarchical relationship among classes, where subclasses can specialize and add more specific features to the inherited behavior.
+It provides a way to organize and structure classes based on their common attributes and behaviors, facilitating code maintenance and readability.
