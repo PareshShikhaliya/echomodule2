@@ -3,6 +3,7 @@ package org.example.class3;
 public class Person3 {
     private String name;
     private int age;
+    private int year;
 
     public Person3(String name, int age) {
         this.name = name;
@@ -17,7 +18,8 @@ public class Person3 {
         return age;
     }
 
-    public boolean isAdult() {
-        return age >= 18;
+    public boolean isAdult()
+    {
+        return age >18;
     }
 }

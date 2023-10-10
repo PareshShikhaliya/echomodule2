@@ -1,5 +1,4 @@
 package org.example.class3;
-
 public class MiddleElement2 {
     public static int findMiddle(int[] arr) {
         if (arr == null || arr.length == 0) {
