@@ -1,0 +1,132 @@
+You want to define a contract:
+ An interface is used to define a contract specifying
+  a set of methods that implementing classes must provide. It is a way to ensure that classes that implement the interface adhere to a specific behavior without concerning themselves with implementation details.
+
+Multiple Inheritance of Type: If you need a class to inherit behaviors from multiple unrelated sources (classes), interfaces allow you to achieve multiple inheritance of type. A class can implement multiple interfaces, gaining the abilities defined by each interface.
+
+Flexibility and Reusability: Interfaces promote loose coupling between classes, making your code more flexible and modular. They allow unrelated classes to share a common set of capabilities, enabling code reuse and ensuring a consistent interface for different classes.
+
+Frameworks and Libraries: Interfaces are commonly used in frameworks and libraries to define behavior that client code must implement. This allows the framework or library to interact with various implementations through the interface, providing a plug-and-play architecture.
+
+Use an Abstract Class When:
+
+Common Base Class: An abstract class is used to create a common base class that provides some shared behavior for its subclasses. It allows you to define default implementations for some methods while leaving others to be implemented by the subclasses.
+
+Code Reusability and Sharing: Abstract classes can contain concrete methods, constructors, and instance variables. This allows you to share code and attributes among the subclasses, promoting code reusability and reducing code duplication.
+
+Partial Implementation: Abstract classes are useful when you want to provide a partial implementation of a class hierarchy and leave certain methods to be implemented by the concrete subclasses. This is especially useful when there are some shared behaviors among subclasses but not a complete implementation.
+
+Single Inheritance: Java supports single inheritance, meaning a class can extend only one superclass. If your class hierarchy requires sharing code among classes, and you have a clear "is-a" relationship between the base class and its subclasses, abstract classes provide a suitable approach.
+
+In Summary:
+
+Use an interface when you want to define a contract, enable multiple inheritance of type, and promote flexibility and reusability in your code.
+Use an abstract class when you want to create a common base class with shared behavior, provide default implementations, and have a "is-a" relationship between the base class and its subclasses.
+Ultimately, the choice between an interface and an abstract class depends on the design goals and relationships between your classes. You can even combine the two approaches in your application, leveraging the strengths of each as needed.
+
+
+// Interface for geometric shapes
+interface Shape {
+    double getArea();
+    double getPerimeter();
+}
+
+// Implementation for Circle
+class Circle implements Shape {
+    private double radius;
+
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
+    @Override
+    public double getArea() {
+        return Math.PI * radius * radius;
+    }
+
+    @Override
+    public double getPerimeter() {
+        return 2 * Math.PI * radius;
+    }
+}
+
+// Implementation for Rectangle
+class Rectangle implements Shape {
+    private double length;
+    private double width;
+
+    public Rectangle(double length, double width) {
+        this.length = length;
+        this.width = width;
+    }
+
+    @Override
+    public double getArea() {
+        return length * width;
+    }
+
+    @Override
+    public double getPerimeter() {
+        return 2 * (length + width);
+    }
+}
+
+
+
+// Abstract class for Vehicles
+abstract class Vehicle {
+    private int maxSpeed;
+    private int fuelCapacity;
+
+    public Vehicle(int maxSpeed, int fuelCapacity) {
+        this.maxSpeed = maxSpeed;
+        this.fuelCapacity = fuelCapacity;
+    }
+
+    // Concrete method for a shared behavior
+    public void refuel() {
+        System.out.println("Refueling...");
+    }
+
+    // Abstract method to be implemented by subclasses
+    public abstract void start();
+
+    // Abstract method to be implemented by subclasses
+    public abstract void stop();
+}
+
+// Concrete subclass - Car
+class Car extends Vehicle {
+    public Car(int maxSpeed, int fuelCapacity) {
+        super(maxSpeed, fuelCapacity);
+    }
+
+    @Override
+    public void start() {
+        System.out.println("Car started.");
+    }
+
+    @Override
+    public void stop() {
+        System.out.println("Car stopped.");
+    }
+}
+
+// Concrete subclass - Bicycle
+class Bicycle extends Vehicle {
+    public Bicycle(int maxSpeed, int fuelCapacity) {
+        super(maxSpeed, fuelCapacity);
+    }
+
+    @Override
+    public void start() {
+        System.out.println("Bicycle started.");
+    }
+
+    @Override
+    public void stop() {
+        System.out.println("Bicycle stopped.");
+    }
+}
+
+

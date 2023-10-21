@@ -1,0 +1,45 @@
+Project Requirements:
+
+The system should allow users to add, remove, and search for books in the library.
+Each book should have attributes like title, author, ISBN, and publication year.
+The system should maintain a collection of books, allowing efficient search and retrieval.
+Users should be able to borrow and return books from the library.
+The system should handle exceptions such as invalid input, book not found, etc.
+The library should be able to store and retrieve book data to/from a file for persistence.
+The system should provide inheritance and method overloading/overriding concepts to handle different types of books and operations efficiently.
+The system should demonstrate the use of composition and association to model relationships between books and library members.
+Classes and functionalities:
+
+Book Class:
+
+Properties: title, author, ISBN, publication year, available copies, total copies, etc.
+Methods: constructor, getters, setters, borrowBook(), returnBook(), toString(), etc.
+Library Class:
+
+Properties: List of books, totalBooks, etc.
+Methods: addBook(), removeBook(), searchBook(), listAllBooks(), saveBooksToFile(), loadBooksFromFile(), etc.
+User Class:
+
+Properties: user_id, name, borrowedBooks, etc.
+Methods: borrowBook(), returnBook(), listBorrowedBooks(), etc.
+LibraryManagementSystem Class:
+
+Main class to handle user interactions, displaying menu options, etc.
+Methods: displayMenu(), handleUserInput(), etc.
+Exception Classes:
+
+Custom exception classes for handling specific scenarios like BookNotFoundException, InvalidInputException, etc.
+Inheritance:
+
+Use inheritance to represent different types of books like FictionBook, NonFictionBook, etc., inheriting from the Book class.
+Method Overloading and Method Overriding:
+
+Demonstrate method overloading in the Library class for searchBook() method based on different search criteria.
+Demonstrate method overriding in the subclasses (e.g., FictionBook, NonFictionBook) for specific book categories.
+Composition:
+
+Use composition to represent a library that contains books and members.
+Association:
+
+Represent the association between users and the books they borrow.
+Remember that this is just a basic outline of the project requirements. Depending on the scope and complexity of the project, you can further expand and refine the functionalities and classes. The main focus is to demonstrate the use of the mentioned Java concepts in the context of a small-scale library management system.

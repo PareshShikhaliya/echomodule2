@@ -23,10 +23,10 @@ abstract class Polygon extends Shape3 {
     public void draw() {
         System.out.println("Drawing a polygon.");
     }
-
 }
 
-class Triangle3 extends Polygon {
+class Triangle3 extends Polygon
+{
 
 }
 

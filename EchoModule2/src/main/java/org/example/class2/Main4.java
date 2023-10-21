@@ -49,13 +49,17 @@ Examples:
 
 Superclass: void makeSound() and Subclasses: void makeSound() (Dog) and void makeSound() (Cat)
  */
-class Calculator {
+class Calculator
+{
     public int add(int a, int b)
     {
         return a + b;
     }
+    public double add(double a, int b) {
+        return a + b;
+    }
 
-    public double add(double a, double b) {
+    public double add(int a, double b) {
         return a + b;
     }
 
@@ -91,11 +95,9 @@ public class Main4 {
     public static void main(String[] args) {
         Calculator calculator = new Calculator();
         int sum1 = calculator.add(5, 10);
-        double sum2 = calculator.add(2.5, 3.7);
         int sum3 = calculator.add(2, 3, 5);
 
         System.out.println("Sum 1: " + sum1);
-        System.out.println("Sum 2: " + sum2);
         System.out.println("Sum 3: " + sum3);
 
 

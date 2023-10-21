@@ -1,0 +1,21 @@
+Difference between Composition, Aggregation, and Inheritance:
+
+Relationship Type:
+
+Composition represents a "whole-part" relationship and is usually used for building complex objects.
+Aggregation represents a "whole-part" relationship but allows the "part" to exist independently.
+Inheritance represents an "is-a" relationship and is used for creating a hierarchy of classes with a specialization relationship.
+Object Lifecycle:
+
+In Composition, the composed objects are created and destroyed along with the container object's lifecycle.
+In Aggregation, the aggregated objects can exist independently and are not affected by the container object's lifecycle.
+In Inheritance, the subclass inherits the properties and methods of the superclass and can extend or override them but has a separate lifecycle.
+Dependency:
+
+Composition and Aggregation represent a stronger form of dependency between classes compared to Inheritance.
+Inheritance can lead to a more rigid codebase, as changes in the superclass might affect all its subclasses.
+Code Reusability:
+
+Composition and Aggregation promote code reusability as classes can be reused as components in different contexts.
+Inheritance promotes code reuse through subclassing, but it can also lead to a complex hierarchy and tight coupling.
+It's important to choose the appropriate relationship based on the specific requirements of your software design. Overusing inheritance can lead to a less flexible and maintainable codebase, so composition and aggregation are often preferred when possible

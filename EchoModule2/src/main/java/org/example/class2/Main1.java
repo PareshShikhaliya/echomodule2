@@ -32,7 +32,8 @@ abstract class Shape {
     public abstract double area();
 
     // Concrete method: complete implementation provided
-    public void displayInfo() {
+    public void displayInfo()
+    {
         System.out.println("Shape: " + name);
         System.out.println("Area: " + area());
     }
@@ -89,7 +90,7 @@ public class Main1 {
         // Example demonstrating the use of abstract class and concrete subclasses
 
         // Creating instances of different shapes
-        Shape circle = new Circle("Circle", 5.0);
+        Circle circle = new Circle("Circle", 5.0);
         Shape rectangle = new Rectangle("Rectangle", 4.0, 6.0);
         Shape triangle = new Triangle("Triangle", 3.0, 4.0);
 
@@ -111,3 +112,4 @@ public class Main1 {
         }
     }
 }
+
