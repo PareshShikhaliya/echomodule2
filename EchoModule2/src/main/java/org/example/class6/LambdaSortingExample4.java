@@ -13,6 +13,17 @@ public class LambdaSortingExample4 {
         list.add("cherry");
         list.add("date");
 
+
+        /*
+         // Create an anonymous class as a LengthComparator
+        Comparator<String> lengthComparator = new Comparator<String>() {
+            @Override
+            public int compare(String str1, String str2) {
+                return Integer.compare(str1.length(), str2.length());
+            }
+        };
+         */
+
         // 1
         Comparator<String> comparator1 = (String obj1, String obj2) -> {
             return obj1.length() - obj2.length();

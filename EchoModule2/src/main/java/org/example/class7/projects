@@ -1,0 +1,23 @@
+The issue is that this code assumes that the decrypted message will eventually match the original message using the generated randomKey. However, in practice, this may not be the case, and the loop can run indefinitely because there's no guarantee that a valid key exists to decrypt the message to match the original message
+
+To address this issue, you need to implement a more robust approach to brute force decryption. One way to improve this is to add a condition to break the loop if the decryption attempt doesn't make any progress or if you've exhausted a reasonable number of attempts
+
+SAMPLE CODE:
+===================
+public static int bruteForceKeyDecoding(String messageToDecode, String originalMessage) {
+    int maxAttempts = 1000; // Limit the number of attempts to prevent an infinite loop
+    for (int attempt = 0; attempt < maxAttempts; attempt++) {
+        int randomKey = generateNewKey();
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < messageToDecode.length(); i++) {
+            char encryptedChar = messageToDecode.charAt(i);
+            char decryptedChar = (char) (encryptedChar - randomKey);
+            sb.append(decryptedChar);
+        }
+        messageToDecode = sb.toString();
+        if (messageToDecode.equals(originalMessage)) {
+            return randomKey; // Return the key if decryption matches the original message
+        }
+    }
+    return -1; // Return -1 if decryption key not found within maxAttempts
+}

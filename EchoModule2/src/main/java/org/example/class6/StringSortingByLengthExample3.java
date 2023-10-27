@@ -22,6 +22,7 @@ public class StringSortingByLengthExample3 {
             }
         };
 
+
         Collections.sort(words, lengthComparator);
 
         System.out.println("Sorted words by length: " + words);

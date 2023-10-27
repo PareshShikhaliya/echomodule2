@@ -22,11 +22,6 @@ public class MethodReferenceExample10 {
          list to the console, but the method reference version is more concise and often considered
           a cleaner way to express this type of operation.
 
-
-
-
-
-
          */
     }
 }

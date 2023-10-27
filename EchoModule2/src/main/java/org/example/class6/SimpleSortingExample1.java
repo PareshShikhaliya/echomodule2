@@ -12,9 +12,7 @@ public class SimpleSortingExample1 {
         words.add("cherry");
         words.add("date");
         words.add("grape");
-
         Collections.sort(words);
-
         System.out.println("Sorted words: " + words);
     }
 }

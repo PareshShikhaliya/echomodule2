@@ -5,9 +5,11 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-class LengthComparator implements Comparator<String> {
+class LengthComparator implements Comparator<String>
+{
     @Override
-    public int compare(String str1, String str2) {
+    public int compare(String str1, String str2)
+    {
         return Integer.compare(str1.length(), str2.length());
     }
 }

@@ -1,5 +1,5 @@
 package org.example.class6;
-
+@FunctionalInterface
 interface Calculator {
     int operate(int a, int b);
 

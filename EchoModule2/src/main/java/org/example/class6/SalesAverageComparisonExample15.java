@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-class SalesTransaction {
+class SalesTransaction
+{
     private double amount;
 
     public SalesTransaction(double amount) {
@@ -16,7 +17,8 @@ class SalesTransaction {
     }
 }
 
-public class SalesAverageComparisonExample15 {
+public class SalesAverageComparisonExample15
+{
     public static void main(String[] args) {
         List<SalesTransaction> transactions = new ArrayList<>();
         transactions.add(new SalesTransaction(150.0));

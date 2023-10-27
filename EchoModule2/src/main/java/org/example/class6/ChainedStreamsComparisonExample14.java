@@ -33,7 +33,9 @@ public class ChainedStreamsComparisonExample14 {
             Path inputPath = Path.of("input.txt");
             Path outputPath = Path.of("output.txt");
 
+
             // Read lines from the input file, process them, and write to the output file
+           // paresh // PARESH
             Files.lines(inputPath)
                     .map(String::toUpperCase) // Process each line
                     .collect(Collectors.toList()) // Collect processed lines into a list

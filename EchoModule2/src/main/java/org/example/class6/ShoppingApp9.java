@@ -7,12 +7,13 @@ class Product {
     String name;
     double price;
 
-    Product(String name, double price) {
+    Product(String name, double price)
+    {
         this.name = name;
         this.price = price;
     }
 }
-
+@FunctionalInterface
 interface DiscountStrategy {
     double applyDiscount(Product product);
 }
@@ -32,8 +33,10 @@ public class ShoppingApp9 {
         calculateAndPrintDiscounts(products, twentyPercentDiscount);
     }
 
-    static void calculateAndPrintDiscounts(List<Product> products, DiscountStrategy discountStrategy) {
-        for (Product product : products) {
+    static void calculateAndPrintDiscounts(List<Product> products, DiscountStrategy discountStrategy)
+    {
+        for (Product product : products)
+        {
             double discountAmount = discountStrategy.applyDiscount(product);
             System.out.println("Product: " + product.name + ", Original Price: $" + product.price + ", Discount: $" + discountAmount);
         }
